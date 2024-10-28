@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+  #frm{
+     width:500px;
+     margin:auto;
+     margin-top:100px;
+  }
+  marquee{
+     margin-top:10px;
+  }
+</style>
+
+<title>order management system</title>
+</head>
+<body class="container-fluid">
+ <marquee><h2 class="text-primary">Order Here</h2></marquee>
+ <form action="register" method='post' class="form card" id='frm'>
+ <h2 class="bg-danger text-white card-header">Registration Form</h2>
+ <table class="table table-hover">
+  <tr>
+   <td>Customer Id:</td>
+   <td><input type="text" name='customer_id' required></td>
+  </tr>
+  <tr>
+   <td>date:</td>
+   <td><input type="date" name='date' required></td>
+  </tr>
+  <tr>
+   <td>Amount:</td>
+   <td><input type="text" name='amount' required></td>
+  </tr>
+  <tr>
+   <td>Status:</td>
+   <td><select name="status">
+            <option value="received">Received</option>
+            <option value="ordered">Ordered</option>
+            <option value="notreceived">NotReceived</option>
+         </select></td>
+  </tr>
+  <tr class="card-footer">
+        <td><button type="submit" class="btn btn-outline-success">Register</button></td>
+        <td><button type="reset" class="btn btn-outline-danger">cancel</button></td>
+  </tr>
+ </table>
+ <button class="btn btn-outline-success d-block"><a href="showdata">Show Orders</a></button>  
+ </form>
+</body>
+</html>
